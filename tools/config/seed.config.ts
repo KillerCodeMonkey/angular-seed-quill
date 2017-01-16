@@ -355,6 +355,8 @@ export class SeedConfig {
       '@angular/platform-browser': 'node_modules/@angular/platform-browser/bundles/platform-browser.umd.js',
       '@angular/platform-browser-dynamic': 'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
       '@angular/router': 'node_modules/@angular/router/bundles/router.umd.js',
+      'ngx-quill': 'node_modules/ngx-quill/bundles/ngx-quill.umd.js',
+      'quill': 'node_modules/quill/dist/quill.js',
 
       '@angular/common/testing': 'node_modules/@angular/common/bundles/common-testing.umd.js',
       '@angular/compiler/testing': 'node_modules/@angular/compiler/bundles/compiler-testing.umd.js',
@@ -372,6 +374,15 @@ export class SeedConfig {
       '*': 'node_modules/*'
     },
     packages: {
+      'ngx-quill': {
+        format: 'cjs',
+        meta: {
+          deps: ['quill']
+        }
+      },
+      'quill': {
+        format: 'cjs'
+      }
     }
   };
 
